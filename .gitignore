@@ -1,32 +1,102 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+//Task - 1
+//
+//struct User {
+//    char username[50];
+//    char password[50];
+//    int age;
+//};
+//
+//void main() {
+//    User user;
+//
+//    cout << "Enter username: ";
+//    cin.getline(user.username, 50);
+//
+//    cout << "Enter password: ";
+//    cin.getline(user.password, 50);
+//
+//    cout << "Enter age: ";
+//    cin >> user.age;
+//
+//    FILE* file;
+//    fopen_s(&file, "C:\\Users\\auce2\\Desktop\\userData.bin", "wb");
+//    if (file != nullptr) {
+//        fwrite(&user, sizeof(User), 1, file);
+//        fclose(file);
+//    }
+//
+//
+//    User readUser;
+//    fopen_s(&file, "C:\\Users\\auce2\\Desktop\\userData.bin", "rb");
+//    if (file != nullptr) {
+//        fread(&readUser, sizeof(User), 1, file);
+//        fclose(file);
+//    }
+//
+//
+//    cout << "\nFile\n";
+//    cout << "Username: " << readUser.username << endl;
+//    cout << "Password: " << readUser.password << endl;
+//    cout << "Age: " << readUser.age << endl;
+//}
+ 
+ 
+//Task - 2
+ 
+//int* reverse(int size) {
+//    int* arr = new int[size] {};
+//    return arr;
+//}
+//
+//void initArray(int* arr, int size) {
+//    int min = 1;
+//    int max = 50;
+//    int random;
+//    for (int i = 0; i < size; i++) {
+//        random = (rand() % (max - min)) + min;
+//        arr[i] = random;
+//    }
+//}
+//
+//void printArray(int* arr, int size) {
+//    cout << "Random array: ";
+//    for (int i = 0; i < size; i++) {
+//        cout << arr[i] << " ";
+//    }
+//    cout << endl;
+//}
+//
+//void main() {
+//    int size;
+//    cout << "Enter size: ";
+//    cin >> size;
+//
+//    auto myArr = reverse(size);
+//    initArray(myArr, size);
+//    printArray(myArr, size);
+//
+//
+//    FILE* file;
+//    fopen_s(&file, "C:\\Users\\auce2\\Desktop\\arrayData.bin", "wb");
+//    if (file != nullptr) {
+//        fwrite(myArr, sizeof(int), size, file);
+//        fclose(file);
+//    }
+//
+//
+//    int* readArr = new int[size];
+//    fopen_s(&file, "C:\\Users\\auce2\\Desktop\\arrayData.bin", "rb");
+//    if (file != nullptr) {
+//        fread(readArr, sizeof(int), size, file);
+//        fclose(file);
+//    }
+//
+//    cout << "\nFile\n";
+//    for (int i = 0; i < size; i++) {
+//        cout << readArr[i] << " ";
+//    }
+//    cout << endl;
+//
+//    delete[] myArr;
+//    delete[] readArr;
+//}
